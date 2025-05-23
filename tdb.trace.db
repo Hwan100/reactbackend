@@ -1,0 +1,146 @@
+2025-05-23 12:23:49.363325+09:00 jdbc[36]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:217)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:134)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:291)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1038)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2025-05-23 12:46:23.338951+09:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "TRUE (USERS: ""STATUS"" ENUM('N', 'Y'))"; SQL statement:
+INSERT INTO USERS (id, name, text, git, blog, status, login_id) VALUES 
+(1, '김진석', '안녕하세요. 김진석입니다\n이번 AWS 기반 DEVOPS 과정 열심히 듣고 웹개발에 대한 지식을 더 많이 알아가겠습니다.\n잘부탁 드립니다 ~', 'https://github.com/KoesJin', 'https://koesjin.tistory.com/', TRUE, 1),
+(2, '백승환', '안녕하세요! 웹개발자를 목표로 하는 백승환입니다.\n7개월동안 잘부탁드립니다.', 'https://github.com/Hwan100', 'https://hwan-100.tistory.com/', TRUE, 2),
+(3, '이지묵', '안녕하세요 이지묵 입니다.\n부족하지만 열심히 하는 모습 보여드리겠습니다!\n다들 화이팅 합시다!!', 'https://github.com/leezi0916', 'https://easymook.tistory.com/', TRUE, 3),
+(4, '이인혜', '이인혜입니다.\n교육기간동안 잘부탁드립니다.', 'https://github.com/userLee147/mainProjcet.git', 'https://lee000.tistory.com/', TRUE, 4),
+(5, '황인태', '안녕하세요. 같이 강의를 듣게 된 황인태라고 합니다.\n강의 듣는 기간동안 잘부탁드립니다!!', 'https://github.com/HwangInTae82', 'https://int0802.tistory.com/', FALSE, 5),
+(6, '김유하', '일단은 백엔드로 취직 생각 중인 김유하 입니다. 앞으로 잘 부탁 드립니다.', 'https://github.com/UHa11', 'https://kuh1216.tistory.com/', TRUE, 6),
+(7, '이주찬', '안녕하세요 이주찬이라고 합니다.\n수강기간동안 열심히하겠습니다 잘부탁드리겠습니다', 'https://github.com/jchxnee', 'https://hyeijoo1234.tistory.com/', FALSE, 7),
+(8, '황동준', '안녕하세요 같이 수업 듣게 된 황동준입니다. 부족하지만 열심히 하겠습니다 잘 부탁드립니다!', 'https://github.com/d5ngjun2', 'https://nikihwangg.tistory.com/', FALSE, 8),
+(9, '이상준', '안녕하세요! 같이 강의를 듣게 된 이상준입니다. 앞으로 잘 부탁 드립니다!', 'https://github.com/eru2', 'https://about-study238.tistory.com/', FALSE, 9),
+(10, '정민구', '안녕하세요 정민구입니다. 부족한점이 많지만 열심히 하겠습니다. 잘부탁드립니다.', 'https://github.com/JEUNG1234', 'https://eledev.tistory.com/', FALSE, 10),
+(11, '김현아', '안녕하세요 김현아라고 합니다. 앞으로 잘 부탁드립니다!', 'https://github.com/kimhyeonah911', 'https://haha020911.tistory.com/', FALSE, 11),
+(12, '김승기', '안녕하세요. 김승기라고 합니다. 같이 좋은 성취 있었으면 좋겠습니다.\n잘 부탁드립니다.', 'https://github.com/sg1315', 'https://tropicana1235.tistory.com/', FALSE, 12),
+(13, '홍승민', '홍승민입니다. AWS 클라우드 기반 Devops 개발자 양성 과정을 다같이 열심히 들으며 잘 부탁드립니다..', 'https://github.com/aotlfekdl', 'https://minkhinformation.tistory.com/', FALSE, 13),
+(14, '최성진', '안녕하세요.\n백엔드를 가고싶어하는 최성진입니다.\n많이 부족하지만 열심히 하겠습니다. 잘 부탁드려요!', 'https://github.com/Csjin99', 'https://skskcsj.tistory.com/', FALSE, 14),
+(15, '정의철', '안녕하세요 정의철입니다. 다함께 좋은 성과를 얻으면 좋겠습니다.7개월동안 잘 부탁드리겠습니다!', 'https://github.com/euicheol99', 'https://euicheol0910.tistory.com/', FALSE, 15),
+(16, '황윤창', '안녕하세요. 황윤창입니다.\n부족하지만 많이 노력하겠습니다.\n잘 부탁 드립니다!', 'https://github.com/Hwang1123', 'https://ayinyun.tistory.com/', FALSE, 16),
+(17, '정형일', '안녕하세요. 정형일이라고 합니다.\n웹 개발을 공부하여 프론트와 백 모두 쉽게 협업할 수 있도록 지식을 쌓는 것을 목표로 하고 있습니다. 다 같이 소통하며 공부했으면 좋겠습니다. 잘 부탁드립니다.', 'https://github.com/ailraon', 'https://rounding-autumn.tistory.com/', FALSE, 17),
+(18, '윤택봉', '안녕하세요. 윤택봉입니다. 부족한 부분이 많겠지만 열심히 하겠습니다.\n잘 부탁드립니다.', 'https://github.com/TaekBongY', 'https://insight1848.tistory.com/', FALSE, 18),
+(19, '전진영', '', 'https://github.com/barc0d2', 'https://boris01.tistory.com/', FALSE, 19),
+(20, '박지민', '', 'https://github.com/parkjimin0817', 'https://harryandpotter.tistory.com/', FALSE, 20),
+(21, '양동민', '', 'https://github.com/didwlwd?tab=repositories', 'https://didehdals.tistory.com/', FALSE, 21),
+(22, '최예찬', '', 'https://github.com/qbsb147', 'https://chan2chani.tistory.com/', FALSE, 22) [22018-232]
+2025-05-23 12:48:35.704497+09:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "TRUE (USERS: ""STATUS"" ENUM('False', 'True'))"; SQL statement:
+INSERT INTO USERS (id, name, text, git, blog, status, login_id) VALUES 
+(1, '김진석', '안녕하세요. 김진석입니다\n이번 AWS 기반 DEVOPS 과정 열심히 듣고 웹개발에 대한 지식을 더 많이 알아가겠습니다.\n잘부탁 드립니다 ~', 'https://github.com/KoesJin', 'https://koesjin.tistory.com/', TRUE, 1),
+(2, '백승환', '안녕하세요! 웹개발자를 목표로 하는 백승환입니다.\n7개월동안 잘부탁드립니다.', 'https://github.com/Hwan100', 'https://hwan-100.tistory.com/', TRUE, 2),
+(3, '이지묵', '안녕하세요 이지묵 입니다.\n부족하지만 열심히 하는 모습 보여드리겠습니다!\n다들 화이팅 합시다!!', 'https://github.com/leezi0916', 'https://easymook.tistory.com/', TRUE, 3),
+(4, '이인혜', '이인혜입니다.\n교육기간동안 잘부탁드립니다.', 'https://github.com/userLee147/mainProjcet.git', 'https://lee000.tistory.com/', TRUE, 4),
+(5, '황인태', '안녕하세요. 같이 강의를 듣게 된 황인태라고 합니다.\n강의 듣는 기간동안 잘부탁드립니다!!', 'https://github.com/HwangInTae82', 'https://int0802.tistory.com/', FALSE, 5),
+(6, '김유하', '일단은 백엔드로 취직 생각 중인 김유하 입니다. 앞으로 잘 부탁 드립니다.', 'https://github.com/UHa11', 'https://kuh1216.tistory.com/', TRUE, 6),
+(7, '이주찬', '안녕하세요 이주찬이라고 합니다.\n수강기간동안 열심히하겠습니다 잘부탁드리겠습니다', 'https://github.com/jchxnee', 'https://hyeijoo1234.tistory.com/', FALSE, 7),
+(8, '황동준', '안녕하세요 같이 수업 듣게 된 황동준입니다. 부족하지만 열심히 하겠습니다 잘 부탁드립니다!', 'https://github.com/d5ngjun2', 'https://nikihwangg.tistory.com/', FALSE, 8),
+(9, '이상준', '안녕하세요! 같이 강의를 듣게 된 이상준입니다. 앞으로 잘 부탁 드립니다!', 'https://github.com/eru2', 'https://about-study238.tistory.com/', FALSE, 9),
+(10, '정민구', '안녕하세요 정민구입니다. 부족한점이 많지만 열심히 하겠습니다. 잘부탁드립니다.', 'https://github.com/JEUNG1234', 'https://eledev.tistory.com/', FALSE, 10),
+(11, '김현아', '안녕하세요 김현아라고 합니다. 앞으로 잘 부탁드립니다!', 'https://github.com/kimhyeonah911', 'https://haha020911.tistory.com/', FALSE, 11),
+(12, '김승기', '안녕하세요. 김승기라고 합니다. 같이 좋은 성취 있었으면 좋겠습니다.\n잘 부탁드립니다.', 'https://github.com/sg1315', 'https://tropicana1235.tistory.com/', FALSE, 12),
+(13, '홍승민', '홍승민입니다. AWS 클라우드 기반 Devops 개발자 양성 과정을 다같이 열심히 들으며 잘 부탁드립니다..', 'https://github.com/aotlfekdl', 'https://minkhinformation.tistory.com/', FALSE, 13),
+(14, '최성진', '안녕하세요.\n백엔드를 가고싶어하는 최성진입니다.\n많이 부족하지만 열심히 하겠습니다. 잘 부탁드려요!', 'https://github.com/Csjin99', 'https://skskcsj.tistory.com/', FALSE, 14),
+(15, '정의철', '안녕하세요 정의철입니다. 다함께 좋은 성과를 얻으면 좋겠습니다.7개월동안 잘 부탁드리겠습니다!', 'https://github.com/euicheol99', 'https://euicheol0910.tistory.com/', FALSE, 15),
+(16, '황윤창', '안녕하세요. 황윤창입니다.\n부족하지만 많이 노력하겠습니다.\n잘 부탁 드립니다!', 'https://github.com/Hwang1123', 'https://ayinyun.tistory.com/', FALSE, 16),
+(17, '정형일', '안녕하세요. 정형일이라고 합니다.\n웹 개발을 공부하여 프론트와 백 모두 쉽게 협업할 수 있도록 지식을 쌓는 것을 목표로 하고 있습니다. 다 같이 소통하며 공부했으면 좋겠습니다. 잘 부탁드립니다.', 'https://github.com/ailraon', 'https://rounding-autumn.tistory.com/', FALSE, 17),
+(18, '윤택봉', '안녕하세요. 윤택봉입니다. 부족한 부분이 많겠지만 열심히 하겠습니다.\n잘 부탁드립니다.', 'https://github.com/TaekBongY', 'https://insight1848.tistory.com/', FALSE, 18),
+(19, '전진영', '', 'https://github.com/barc0d2', 'https://boris01.tistory.com/', FALSE, 19),
+(20, '박지민', '', 'https://github.com/parkjimin0817', 'https://harryandpotter.tistory.com/', FALSE, 20),
+(21, '양동민', '', 'https://github.com/didwlwd?tab=repositories', 'https://didehdals.tistory.com/', FALSE, 21),
+(22, '최예찬', '', 'https://github.com/qbsb147', 'https://chan2chani.tistory.com/', FALSE, 22) [22018-232]
+2025-05-23 13:04:30.461837+09:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "TRUE (TODOS: ""COMPLETED"" ENUM('False', 'True'))"; SQL statement:
+INSERT INTO TODOS (num, text, completed, id) VALUES 
+(1, 'React', TRUE, 2),
+(2, 'HTML', FALSE, 2),
+(3, 'CSS', FALSE, 2),
+(4, 'JavaScript', FALSE, 2),
+(5, 'Spring', FALSE, 2),
+(6, 'Java', FALSE, 2),
+(7, 'SourceTree', FALSE, 2),
+(8, 'VSCode', FALSE, 2),
+(9, 'IntelliJ', FALSE, 2),
+(10, 'Figma', FALSE, 2),
+(11, 'SQL', FALSE, 2),
+(12, '먹기', FALSE, 3),
+(13, '싸기', FALSE, 3),
+(14, '자기', FALSE, 3) [22018-232]
+2025-05-23 15:52:52.254074+09:00 jdbc[169]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:85)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:291)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1038)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:217)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:134)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:291)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1038)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
+2025-05-23 15:52:52.255073+09:00 jdbc[169]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:85)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:291)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1038)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:217)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:134)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:291)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1038)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:154)
+	at org.h2.server.web.WebThread.run(WebThread.java:103)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 13 more
