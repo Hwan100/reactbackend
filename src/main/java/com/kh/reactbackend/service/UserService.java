@@ -7,4 +7,5 @@ import java.util.List;
 public interface UserService {
 
     List<UserDto.Response> findAllUsers();
+    UserDto.Response getUserById(Long id);
 }

@@ -20,4 +20,12 @@ public class UserServiceImpl implements UserService {
     public List<UserDto.Response> findAllUsers() {
         return userRepository.findAll().stream().map(UserDto.Response::toDto).collect(Collectors.toList());
     }
+
+    @Override
+    public UserDto.Response getUserById(Long id) {
+        return userRepository.findOne(id)
+                .map(UserDto.Response::toDto)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 회원입니다."));
+    }
+
 }

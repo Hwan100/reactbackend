@@ -22,4 +22,8 @@ public class Login {
 
     @OneToOne(mappedBy = "login")
     private Users user;
+
+    public void insertId(Long id) {
+        this.id = id;
+    }
 }
